@@ -14,7 +14,7 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
-
+require 'twilio-ruby'
 require 'sinatra'
 require "sinatra/reloader" if development?
 require 'erb'
@@ -26,6 +26,10 @@ require 'pry-byebug'
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
+
+TWILIO_SID = ENV['TWILIO_SID']
+TWILIO_TOKEN = ENV['TWILIO_TOKEN']
+TWILIO_NUMBER = ENV['TWILIO_NUMBER']
 
 configure do
   # By default, Sinatra assumes that the root is the file that calls the configure block.

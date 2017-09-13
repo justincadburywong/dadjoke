@@ -17,6 +17,7 @@ gem 'bcrypt'
 gem 'pry-byebug'
 gem 'shotgun'
 gem 'faker'
+gem 'twilio-ruby'
 
 group :test do
   gem 'rspec'
